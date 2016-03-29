@@ -11,7 +11,6 @@ public class HangmanController {
 	//constructor for hangmanController
 	public HangmanController(){
 		library = new HangmanLibrary();
-		
 	}
 	
 	//method to pull a word at random from the instantiated library
@@ -29,7 +28,6 @@ public class HangmanController {
 		for(int i = 0; i < randWord.length(); i++){
 			dashWord += "?";	
 		}
-		
 		return dashWord;
 	}
 	
@@ -51,7 +49,6 @@ public class HangmanController {
 		if(tempWinCount == winCount){
 			loseCount++;
 		}
-		
 		return revealWord;
 	}
 	
@@ -72,6 +69,4 @@ public class HangmanController {
 	public void setLose(int set){
 		loseCount = set;
 	}
-	
-	
 }

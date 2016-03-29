@@ -34,7 +34,6 @@ public class HangmanLibrary{
 		for(String word: library){
 			size++;
 		}
-		
 		return size;
 	}
 	
@@ -43,5 +42,4 @@ public class HangmanLibrary{
 		
 		return library.get(index);
 	}
-	
 }

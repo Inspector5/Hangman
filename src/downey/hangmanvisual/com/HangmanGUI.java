@@ -47,9 +47,6 @@ public class HangmanGUI{
 	//keeps track of whether the user chooses to play another round or quit the game
 	private int optionPaneButton = JOptionPane.YES_NO_OPTION;
 	
-	//keeps track of the correct/incorrect count of letters guessed
-	
-	
 	public HangmanGUI(){
 		//instantiate global variables in constructor
 		window = new JFrame("Java Hangman");
@@ -162,11 +159,9 @@ public class HangmanGUI{
 			x++;
 		}
 		
-
 		mainPanel.add(picPanel);
 		mainPanel.add(wordPanel);
 		window.add(mainPanel);
-		
 	}
 	
 
@@ -189,7 +184,6 @@ public class HangmanGUI{
 			window.setVisible(false);
 			window.dispose();
 		}
-		
 	}
 	
 	//method that displays losing option pane and option to play again
@@ -197,7 +191,6 @@ public class HangmanGUI{
 		if(controller.loseReturn() == 7){	
 			optionPaneButton = JOptionPane.showConfirmDialog(window, "You lose! The word was: " + randomWord + "\n\nWould you like to play again?","You lose. . .", optionPaneButton);
 			playAgain();
-			
 		}	
 	}
 	
@@ -224,7 +217,6 @@ public class HangmanGUI{
 		picLabel.repaint();
 		
 		//reset win/lose counts tracked in both GUI and controller
-		
 		controller.setLose(0);
 		controller.setWin(0);
 		
@@ -237,7 +229,6 @@ public class HangmanGUI{
 		for(int i = 0; i <= buttonArray.length-1; i++){
 			buttonArray[i].setEnabled(true);
 		}
-		
 		//set optiontPane back to yes/no for win/lose option pane
 		optionPaneButton = JOptionPane.YES_NO_OPTION;
 	}
@@ -256,10 +247,8 @@ public class HangmanGUI{
 				
 				updatePicture();
 				gameLost();
-				gameWon();
-				
+				gameWon();	
 			}
 		}
-			
 }
 
